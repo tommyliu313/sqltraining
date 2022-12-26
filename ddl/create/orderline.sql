@@ -1,0 +1,8 @@
+CREATE TABLE order_line (
+    order_id NUMBER() NOT NULL,
+    NUMBER() NOT NULL,
+    NUMBER() NOT NULL,
+    CONSTRAINT order_line PRIMARY KEY REFERENCES(order_id ),
+    CONSTRAINT order_line FOREIGN KEY() REFERENCES(),
+    CONSTRAINT order_line FOREIGN KEY() REFERENCES(),
+)

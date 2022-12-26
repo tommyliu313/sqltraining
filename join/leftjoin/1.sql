@@ -1,0 +1,3 @@
+SELECT c1, c2
+FROM t1
+LEFT JOIN t2 ON
