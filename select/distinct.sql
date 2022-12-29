@@ -1,0 +1,1 @@
+SELECT DISTINCT product_finish FROM product;

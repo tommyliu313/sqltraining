@@ -1,0 +1,4 @@
+DROP INDEX empIdx;
+DROP INDEX empIdx;
+DROP INDEX empIdx;
+DROP INDEX empIdx;
