@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS employee(
+    Emply_id SMALLINT PRIMARY KEY AUTO_INCREMENT,
+    Title ENUM('Mr','Mrs.','Miss','Dr.','Sr.'),
+    First_Name VARCHAR(50) NOT NULL,
+    Last_Name VARCHAR(50) NOT NULL,
+    Email VARCHAR(100),
+    Salary DECIMAL(8,2) DEFAULT 35000,
+    Hire_Date DATETIME DFAULT CURRENT_TIMESTAMP(),
+    Phone CHAR(14),
+    SSN CHAR(11)
+);
