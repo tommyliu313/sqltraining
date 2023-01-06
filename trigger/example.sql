@@ -2,3 +2,11 @@ CREATE TRIGGER trigger_name
 WHEN EVENT
 ON table_name TRIGGER_TYPE
 EXECUTE stored_procedure;
+
+CREATE TRIGGER upd_check_album BEFORE UPDATE ON Album
+FOR EACH ROW
+BEGIN
+ IF NEW.View < 0 THEN
+   SET NEW.View = 0;
+ END IF;
+END;
