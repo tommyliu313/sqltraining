@@ -1,12 +1,12 @@
 SELECT * FROM Sports
-    WHERE LEFT(Class, 1) = "1"
-    ORDER BY Class;
+    WHERE LEFT(class, 1) = "1"
+    ORDER BY class;
 
 SELECT COUNT(*) FROM Sports
-    WHERE LEFT(Class, 1) = "1"
-    GROUP BY Class;
+    WHERE LEFT(class, 1) = "1"
+    GROUP BY class;
 
-SELECT Event FROM Sports
-    GROUP BY Event;
+SELECT event FROM Sports
+    GROUP BY event;
 
-SELECT DISTINCT Event FROM Events    
+SELECT DISTINCT event FROM Sports
