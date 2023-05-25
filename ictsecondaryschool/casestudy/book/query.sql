@@ -1,0 +1,19 @@
+SELECT * FROM BOOK
+SELECT Thickness, Page_Num FROM BOOK
+SELECT Thickness / Page_Num FROM BOOK
+SELECT Author FROM BOOK
+    GROUP BY Title
+
+SELECT Author FROM BOOK
+    ORDER BY Title
+
+SELECT Title FROM BOOK
+    WHERE Bcode = '789002'
+
+SELECT BCode, Title FROM BOOK
+    WHERE Author = 'Simon'
+    ORDER BY BCode
+
+SELECT BCode, Title FROM BOOK
+    WHERE Date_In BETWEEN '2011/1/1' AND '2011/12/31'
+    ORDER BY Date_In DESC
