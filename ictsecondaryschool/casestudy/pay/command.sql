@@ -1,0 +1,1 @@
+SELECT Name, Rate * Hour as salary from PAY
