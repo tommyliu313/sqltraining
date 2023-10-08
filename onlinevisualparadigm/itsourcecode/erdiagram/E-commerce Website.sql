@@ -1,4 +1,5 @@
-/*URL: https://itsourcecode.com/uml/e-commerce-website-er-diagram-erd-entity-relationship-diagram/*/
+/*URL: https://itsourcecode.com/uml/e-commerce-website-er-diagram-erd-entity-relationship-diagram */
+
 CREATE TABLE Customer(
     customer_id INT(11),
     name varchar(255),
@@ -22,3 +23,10 @@ CREATE TABLE Shopping_Order(
     category_id int(11) NOT NULL,
     date DATE
 )
+
+
+
+
+
+
+
