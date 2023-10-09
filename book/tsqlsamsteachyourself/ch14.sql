@@ -1,3 +1,13 @@
+--ch14-2
+--CREATE PROCEDURE procPersonGetNoCount AS
+--SET NOCOUNT ON
+--SELECT BusinessEntityID, FirstName, LastName
+--FROM Person.Person
+--ORDER BY LastName, FirstName
+--SELECT @@RowCount as NumberOfPeople
+
+
+
 --ch14-8
 CREATE PROCEDURE procEmployeeGetByTitleAndBirthDateOpt
     @JobTitle nVarChar(50) = NULL,

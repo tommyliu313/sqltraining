@@ -1,3 +1,7 @@
+--ch6-3
+SELECT BusinessEntityID, PersonType, LastName FROM Person.Person
+WHERE PersonType = 'EM' AND LastName LIKE 'MA%'
+
 --ch6-6
 SELECT DATEPART(d, GetDate()) AS DayOfMonth
 SELECT DATEPART(m, GetDate()) AS MonthOfYear

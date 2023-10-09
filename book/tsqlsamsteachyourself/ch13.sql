@@ -1,3 +1,6 @@
+--ch13-8
+
+
 --ch13-18
 
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[MyTable]'))
