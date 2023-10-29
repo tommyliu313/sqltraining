@@ -1,5 +1,24 @@
 --ch13-8
 
+--ch13-14
+IF Month(GetDate()) > 6
+    BEGIN
+        PRINT 'In IF Statement'
+        GOTO MyLabel
+    END
+SELECT FirstName, LastName FROM Person.Person
+RETURN
+
+--ch13-17
+USE [AdventureWorks2014]
+GO
+
+DECLARE @return_value int
+
+EXEC @return_value = [dbo].[procCASEELSE]
+
+SELECT 'Return Value' = @return_value
+GO
 
 --ch13-18
 

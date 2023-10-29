@@ -21,3 +21,15 @@ SELECT DATEDIFF(d, GETDATE(), '12/31/14') AS NumberofDays
 SELECT DATEDIFF(d, GETDATE(), '12/31/14') AS NumberofMonths
 SELECT DATEDIFF(yyyy, GETDATE(), '12/31/14') AS NumberofYears
 SELECT DATEDIFF(q, GETDATE(), '12/31/14') AS NumberofQuarters
+
+--ch6-9
+SELECT BusinessEntityID, FirstName, LastName, ModifiedDate
+    FROM Person.Person
+    WHERE ModifiedDate BETWEEN '1/1/2023' AND '12/31/2024'
+    ORDER BY ModifiedDate
+
+--ch6-10
+SELECT BusinessEntityID, FirstName, LastName, ModifiedDate
+    FROM Person.Person
+    WHERE ModifiedDate BETWEEN '1/1/2023' AND '12/31/2024'
+    ORDER BY ModifiedDate DESC

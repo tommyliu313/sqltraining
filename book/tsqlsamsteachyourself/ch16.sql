@@ -21,7 +21,6 @@ CREATE PROCEDURE procGetString
 @FindString varchar(8000)
 AS
 BEGIN
-
 SET NOCOUNT ON;
 DECLARE @SQLCommand varchar(8000)
 DECLARE @Where varchar(8000)
@@ -31,6 +30,20 @@ DECLARE @Cursor varchar(8000)
 SET @SQLCommand = 'SELECT * FROM Person.Address'
 SET @Where = ''
 SET @Cursor = 'DECLARE FIndCursor CURSOR FOR SELECT COLUMN_NAME
-    FROM'
+    FROM ' + DB_NAME() + '.INFORMATION_SCHEMA.COLUMNS'
+
+EXEC (@Cursor)
+
+OPEN FindCursor
+FETCH NEXT FROM FindCursor INTO @ColumnName
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+IF @Where <> ''
+    BEGIN
+    SET @Where = @Where + ' OR '
+    END
+SET @Where = @Where + '[' + @ColumnName + '] LIKE"'+ @FindString + '"';
+END
 
 END

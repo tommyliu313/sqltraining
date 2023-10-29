@@ -29,3 +29,26 @@ ELSE
         BirthDate >= @BirthDate
     ORDER BY BirthDate
     END
+
+
+--ch14-10
+
+CREATE PROCEDURE procOrderDetailAddHandleError3
+@SalesOrderID int,
+@CarrierTrackingNumber nvarchar(25),
+@OrderQty smallint,
+@ProductID int,
+@UnitPrice money,
+@UnitPriceDiscount money,
+@SalesOrderDetailID int = 0 OUTPUT,
+@LocalError int = 0 OUTPUT,
+@LocalRows int = 0 OUTPUT
+AS
+INSERT INTO Sales.SalesOrderDetail (SalesOrderDetailID, CarrierTrackingNumber, OrderQty, ProductID, UnitPrice, UnitPriceDiscount)
+VALUES(@SalesOrderID, @CarrierTrackingNumber, @OrderQty, @ProductID, @UnitPrice, @UnitPriceDiscount)
+SELECT @SalesOrderDetailID = @@Identity, 
+    @LocalError = @@Error, @LocalRows = @@RowCount
+SELECT @SalesOrderDetailID, @LocalError, @LocalRows    
+
+
+ 
